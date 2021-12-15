@@ -4,6 +4,8 @@ import {BrowserRouter,Route,Switch,Link} from 'react-router-dom'
 
 import Login from './components/Login'
 import FriendsList from './components/FriendsList';
+import AddFriend from './components/AddFriend';
+import Logout from './components/Logout';
 
 function App() {
   return (
@@ -27,8 +29,11 @@ function App() {
 
 
      <Switch>
-       <Route path="/login" component={Login}/>
-       <Route path="/friends" component={FriendsList}/>
+       <Route exact path="/" component={Login}/>
+       <Route exact path="/login" component={Login}/>
+       <Route exact path="/friends" component={FriendsList}/>
+       <Route exact path="/friends/add" component={AddFriend}/>
+       <Route path="/logout" component={Logout}/>
        
 
      </Switch>
